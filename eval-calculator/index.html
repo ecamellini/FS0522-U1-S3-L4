@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!--
+    Vogliamo creare una semplice calcolatrice.
+    Questa calcolatrice deve avere:
+    - 10 bottoni per i numeri da 0 a 9
+    - 4 bottoni per le operazioni: - + * /
+    - Un bottone per mostrare il risultato di quello che l'utente ha scritto: il bottone =
+    - Non vogliamo supportare, per ora, nessuna funzionalità di operazioni in sequenza
+    - Una schermata di output per vedere il risultato
+    - Il bottone cancella, che cancella quello che l'utente ha scritto
+
+    Nice to have:
+    - Rapporti percentuali
+    - In futuro vogliamo poter concatenare varie operazioni
+    - Operazione potenza
+    - SQRT (Square root - radice quadrata)
+   -->
+
+  <div id="container">
+    <input type="text" id="display" readonly placeholder="Try this calculator!" />
+    <div id="buttons">
+      <!--  usare <button /> o usare <input type="button" /> è la stessa cosa -->
+      <button onclick="writeToDisplay('1')">1</button>
+      <button onclick="writeToDisplay('2')">2</button>
+      <button onclick="writeToDisplay('3')">3</button>
+      <button onclick="writeToDisplay('+')">+</button>
+      <button onclick="writeToDisplay('4')">4</button>
+      <button onclick="writeToDisplay('5')">5</button>
+      <button onclick="writeToDisplay('6')">6</button>
+      <button onclick="writeToDisplay('-')">-</button>
+      <button onclick="writeToDisplay('7')">7</button>
+      <button onclick="writeToDisplay('8')">8</button>
+      <button onclick="writeToDisplay('9')">9</button>
+      <button onclick="writeToDisplay('*')">*</button>
+      <button onclick="deleteDisplay()">C</button>
+      <button onclick="writeToDisplay('0')">0</button>
+      <button onclick="showResult()">=</button>
+      <button onclick="writeToDisplay('/')">/</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
